@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Portfolio C#</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" asp-page="/Index">Portfolio<span>C#</span></a>
+            <button class="nav-toggle" type="button" onclick="toggleMenu()">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Projects">Projects</a>
+                <a asp-page="/About">About</a>
+                <a asp-page="/Contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div>Built with ASP.NET Core, C#, Razor Pages, and CSS.</div>
+    </footer>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
